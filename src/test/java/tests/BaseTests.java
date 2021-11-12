@@ -65,6 +65,7 @@ public class BaseTests {
         testCaseThreePage.login();
         testCaseThreePage.goToCandidates();
         testCaseThreePage.getNumberOfCandidates();
+        testCaseThreePage.addCandidate();
 
 
     }

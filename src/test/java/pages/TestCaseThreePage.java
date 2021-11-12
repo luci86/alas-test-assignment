@@ -45,6 +45,16 @@ public class TestCaseThreePage {
     @FindBy(className = "material-checkbox")
     public List<WebElement> tableOfCandidates;
 
+    @FindBy(id = "addItemBtn")
+    public WebElement addCandidateBtn;
+
+    @FindBy(xpath = "//*[@id=\\\"modalAddCandidate\\\"]")
+    public WebElement findModalContainer;
+
+//    @FindBy(xpath = ".//*[@id=\\\"addCandidate_firstName\\\"]")
+//    public WebElement findModalContent;
+
+
 
 
 
@@ -63,6 +73,17 @@ public class TestCaseThreePage {
         wait.until(ExpectedConditions.visibilityOfAllElements(tableOfCandidates));
         int numberOfCandidates = tableOfCandidates.size();
         System.out.println(numberOfCandidates);
+    }
+
+    public void addCandidate() {
+        wait.until(ExpectedConditions.visibilityOf(addCandidateBtn));
+        addCandidateBtn.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("modalAddCandidate")));
+        WebElement modalContainer=driver.findElement(By.id("modalAddCandidate"));
+        WebElement modalContent=modalContainer.findElement(By.id("addCandidate_firstName"));
+        modalContent.clear();
+        modalContent.sendKeys("QA Automation");
+
     }
 
 
