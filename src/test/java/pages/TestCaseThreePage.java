@@ -48,13 +48,6 @@ public class TestCaseThreePage {
     @FindBy(id = "addItemBtn")
     public WebElement addCandidateBtn;
 
-    @FindBy(xpath = "//*[@id=\\\"modalAddCandidate\\\"]")
-    public WebElement findModalContainer;
-
-//    @FindBy(xpath = ".//*[@id=\\\"addCandidate_firstName\\\"]")
-//    public WebElement findModalContent;
-
-
 
 
 
